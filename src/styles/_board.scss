@@ -1,0 +1,61 @@
+/* BOARD: ROWS, CELLS */
+
+.board {
+	background-image: url("https://images.pexels.com/photos/733475/pexels-photo-733475.jpeg?auto=compress&cs=tinysrgb&w=320&dpr=2&q=50&auto=format");
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	height: 100%;
+	position: relative;
+}
+
+.row {
+	display: flex;
+}
+
+.cell {
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	border: 1px inset #CB8;
+	color: #ccc;
+	font-family: 'Rock Salt', cursive;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	position: relative;
+}
+
+.flag,
+.message {
+	position: absolute;
+}
+
+.cell {
+	&.hidden {
+		background-color: rgba(2, 10, 26, 0.8);
+		color: transparent;
+
+		.flag {
+			color: #ccc;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+.message {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	font-size: 60px;
+}
+
+.is-emoji {
+	font-family: initial;
+	font-size: 25px;
+}
+
+

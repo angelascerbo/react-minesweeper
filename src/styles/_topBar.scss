@@ -1,0 +1,25 @@
+/* TOP BAR: BUTTONS, RESET, TIMER */
+
+.top-bar {
+	display: flex;
+}
+
+.util {
+	width: 33.33%;
+	display: flex;
+	font-size: 40px;
+
+	&.reset {
+		justify-content: center;
+		cursor: pointer;
+	}
+
+	&.remain,
+	&.timer {
+		font-family: 'Share Tech Mono', monospace;
+	}
+
+	&.timer {
+		justify-content: flex-end;
+	}
+}
